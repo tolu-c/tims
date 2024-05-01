@@ -1,8 +1,15 @@
+import { cn } from "@/utils";
 import Link from "next/link";
+import { ComponentProps } from "react";
 
-export const Logo = () => (
+type LogoProps = ComponentProps<"a">;
+export const Logo = ({ className, ...rest }: LogoProps) => (
   <Link
-    className="text-2xl font-bold text-gray-100 hover:text-gray-50"
+    className={cn(
+      "text-2xl font-bold text-gray-100 hover:text-gray-50",
+      className,
+    )}
+    {...rest}
     href={"/"}
   >
     TIMS

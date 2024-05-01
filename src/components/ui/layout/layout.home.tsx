@@ -10,3 +10,6 @@ export const HomeLayout = ({ children, className, ...rest }: LayoutProps) => {
     </main>
   );
 };
+
+  
+    
